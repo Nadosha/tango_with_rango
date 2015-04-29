@@ -8,7 +8,7 @@ def index(request):
 
     # Construct a dictionary to pass to the template engine as its context.
     # Note the key boldmessage is the same as {{ boldmessage }} in the template!
-    context_dict = {'boldmessage': "I bold font the context"}
+    context_dict = {'boldmessage': "I'm saxy Rango'"}
     # Return a rendered response to send to the client.
     return render(request, 'rango/index.html', context_dict)
 
@@ -16,4 +16,4 @@ def index(request):
 # Now create a new view called about which returns the following: Rango says here is the about page.
 def about(request):
 	#In the HttpResponse in the about view include a link back to the main page.
-	return HttpResponse("Rango says here is the about page <br/> <a href='/rango/'>Back to Index page</a>")
+	return render(request, 'rango/about.html')

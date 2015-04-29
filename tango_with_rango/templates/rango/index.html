@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+{% load staticfiles %}
+
 <html>
 	<head>
 		<title>Rango</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/stylesheet.css' %}">
 	</head>	
 
 	<body>
 		<h1 style="color:blue">Rango says...</h1>
 		Hello Baby! <strong>{{ boldmessage }}</strong><br/>
-		<a href="/rango/about/"></a><br/>
-
-		{% load staticfiles %}
-<img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
+        <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" style="height:350px"><br/>
+        <a href="/rango/about/">Learn more about -></a><br/>
 	</body>
 </html>

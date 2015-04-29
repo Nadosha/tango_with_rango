@@ -56,7 +56,7 @@ ROOT_URLCONF = 'tango_with_rango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [ os.path.join(BASE_DIR, 'templates') ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,6 +68,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'tango_with_rango.wsgi.application'
 
@@ -101,7 +102,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/' 
+
+STATIC_PATH = ( os.path.join(BASE_DIR, 'static'))
+
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
+    STATIC_PATH,
 )
 
+
+# Media server
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
