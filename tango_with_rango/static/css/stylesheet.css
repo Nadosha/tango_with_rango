@@ -2,9 +2,25 @@ body {
 	padding-top: 20px;
 	text-align: center;
 }
+.header {
+	padding: 10px;
+	display: inline-block;
+	background: yellow;
+}
 a {
 	text-decoration: none;
-	color: yello;
-	font-size: 16px;
-	font-weight: bold;
+	color: black;
+}
+a :active{
+	color: black;
+}
+a:hover { 
+    background-color: yellow;
+}
+.list li {
+	color: black;
+	list-style: none;
+	display: inline;
+	padding: 10px;
+
 }
